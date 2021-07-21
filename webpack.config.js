@@ -28,7 +28,8 @@ module.exports = {
     publicPath: '/'
   },
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    contentBase: path.join(__dirname, 'src')
   },
   plugins: debug ? [] : [
     new webpack.optimize.OccurrenceOrderPlugin(),
